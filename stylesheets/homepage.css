@@ -1,0 +1,307 @@
+:root {
+    --primary-background-color: rgb(255, 246, 246);
+    --daily-forecast-card-background-color: rgb(249, 255, 254);
+}
+
+body {
+    margin: 0px;
+}
+
+/* Background Image Container */
+.background_image_container {
+    background-image: url("../assets/images/elg21-sky-5907605_640.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Main Container Container */
+.main_container {
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 90%;
+    min-height: 800px;
+    padding: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+/* SearchBox Main Container */
+.searchbox_main_container {
+    background-color: var(--primary-background-color);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.searchbox_main_container h1 {
+    text-align: center;
+    margin: 5px 0px 10px;
+}
+
+.searchbox_container {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#searchbox_input {
+    border-radius: 20px;
+    padding: 5px;
+    width: 300px;
+}
+
+#searchbox_check_button {
+    background-color: rgb(22, 184, 224);
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease-in;
+}
+
+#searchbox_check_button:disabled {
+    background-color: grey;
+}
+
+#searchbox_check_button:not(:disabled):hover {
+    background-color: rgb(16, 107, 129);
+}
+
+#check_status_text {
+    display: none;
+    text-align: center;
+    margin: 5px 0px 1px;
+    color: black;
+}
+
+#check_status_text.active {
+    display: block;
+}
+
+#check_status_text.active.error {
+    color: red;
+}
+
+/* Weather Data Container */
+#weather_main_data_container {
+    background-color: var(--primary-background-color);
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    display: none;
+}
+
+#weather_main_data_container.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.weather_current_forecast_container {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#location_name_text {
+    margin: 0px;
+    text-align: center;
+}
+
+#current_weather_text {
+    margin: 0px;
+    text-align: center;
+}
+
+#current_weather_icon_container {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#current_weather_icon {
+    width: 100px;
+    height: 100px;
+    padding: 10px 0px;
+}
+
+#current_temperature_text {
+    margin: 0px;
+    text-align: center;
+}
+
+.extra_weather_data_container {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.extra_weather_data_card {
+    background-color: transparent;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.extra_weather_data_icon_container {
+    background-color: transparent;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.extra_weather_data_icon_container i {
+    font-size: 45px;
+}
+
+.extra_weather_data_info_container {
+    background-color: transparent;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.extra_weather_data_info_container p,
+.extra_weather_data_info_container h4 {
+    margin: 0px;
+}
+
+/* Daily Weather Forecast Container */
+.weather_daily_forecast_main_container {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#weather_daily_forecast_card_container {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-sizing: border-box;
+    padding: 10px;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.weather_daily_forecast_card {
+    background-color: var(--daily-forecast-card-background-color);
+    display: flex;
+    min-width: 210px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
+.weather_daily_forecast_card img {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 10px;
+}
+
+.daily_forecast_extra_data_container {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.daily_forecast_extra_data_container p {
+    margin: 0px;
+}
+
+.daily_weather_forecast_date_text {
+    margin: 0px;
+    text-align: center;
+    padding-top: 10px;
+    font-style: italic;
+    color: gray;
+}
+
+/* Credits Container */
+.credits_container {
+    background-color: rgba(14, 14, 14, 0.082);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.credits_container p {
+    font-size: small;
+    margin: 0px;
+    text-align: center;
+}
+
+/* --------------------------------------- Responsiveness ------------------------------------------ */
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .main_container {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .main_container {
+        width: 50%;
+    }
+}

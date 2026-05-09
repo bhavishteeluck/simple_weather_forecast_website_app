@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Simple Weather Forecast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="stylesheets/homepage.css">
+</header>
+
+<body>
+    <div class="background_image_container">
+        <div class="main_container">
+            <div class="searchbox_main_container">
+                <h1>Simple Weather Forecast</h1>
+                <div class="searchbox_container">
+                    <input type="text" placeholder="Enter a location or city name..." id="searchbox_input">
+                    <button id="searchbox_check_button" onclick="checkButtonClicked()">Check</button>
+                </div>
+                <p id="check_status_text"></p>
+            </div>
+
+            <div id="weather_main_data_container">
+                <div class="weather_current_forecast_container">
+                    <h1 id="location_name_text"></h1>
+                    <div id="current_weather_icon_container"></div>
+                    <h3 id="current_weather_text"></h3>
+                    <h2 id="current_temperature_text"></h2>
+                    <div class="extra_weather_data_container">
+                        <div class="extra_weather_data_card">
+                            <div class="extra_weather_data_icon_container">
+                                <i class="fa-solid fa-water"></i>
+                            </div>
+                            <div class="extra_weather_data_info_container">
+                                <p><i>Humidity</i></p>
+                                <h4 id="current_humidity_text"></h4>
+                            </div>
+                        </div>
+
+                        <div class="extra_weather_data_card">
+                            <div class="extra_weather_data_icon_container">
+                                <i class="fa-solid fa-wind"></i>
+                            </div>
+                            <div class="extra_weather_data_info_container">
+                                <p><i>Wind Speed</i></p>
+                                <h4 id="current_wind_speed_text"></h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="weather_daily_forecast_main_container">
+                    <h3>Daily Forecast</h3>
+                    <div id="weather_daily_forecast_card_container">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="credits_container">
+            <p>Made by Bhavish Teeluck</p>
+            <p>APIs from OpenMeteo: <a href="https://open-meteo.com/" target="_blank">Weather Forecast API</a> and <a
+                    href="https://open-meteo.com/en/docs/geocoding-api" target="_blank">Geocoding API</a></p>
+            <p>Background Image by <a href="https://pixabay.com/photos/sky-clouds-atmoshphere-5907605/"
+                    target="_blank">ELG21 from Pixabay</a></p>
+            <p>Weather Icons from <a href="https://www.flaticon.com" target="_blank">Flaticon</a></p>
+        </div>
+    </div>
+
+    <script src="javascripts/weather_api.js"></script>
+</body>
+
+</html>
